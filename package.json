@@ -1,0 +1,19 @@
+{
+  "name": "party-box",
+  "version": "1.0.0",
+  "description": "My Local Music Downloader From Telegram",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zer0Power/party-box.git"
+  },
+  "author": "Savage 0p;",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Zer0Power/party-box/issues"
+  },
+  "homepage": "https://github.com/Zer0Power/party-box#readme"
+}
