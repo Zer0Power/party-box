@@ -38,19 +38,19 @@ bot.on('message', async (message) => {
             //Define Path and File Name
             const fileId = message.audio.file_id;
             const fileSize = message.audio.file_size;
-            const filePath = `/var/lib/mopidy/musics/telmusics/${message.audio.file_name}`;
+            const filePath = `./musics/${message.audio.file_name}`;
 
 
             if (fileSize > 50 * 1024 * 1024) { // check if file is too big
                 bot.sendMessage(message.chat.id, `❌ Sorry, the file is too big to be sent.`);
             } else {
-                bot.downloadFile(fileId, '/var/lib/mopidy/musics/telmusics/').then(() => {
+               // bot.downloadFile(fileId, './musics/').then(() => {
                     const fileStream = fs.createWriteStream(filePath);
                     bot.getFileStream(fileId).pipe(fileStream);
                     fileStream.on('finish', () => {
                         console.log(`File ${fileId} saved to ${filePath}`);
                         bot.sendMessage(message.chat.id, `📥 File ${message.audio.title} saved to server!`);
-                    });
+                    //});
                 });
             }
         } else {
