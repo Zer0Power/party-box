@@ -1,2 +1,2 @@
 # party-box
-My Local Music Downloader From Telegram.
+My Local Music Downloader From Telegram
